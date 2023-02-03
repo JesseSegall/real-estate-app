@@ -61,7 +61,7 @@ const HeroForm = ({}) => {
 						placeHolder='Consent'
 						{...register('consent', { required: true })}
 					>
-						I consent to having my cheeks clapped
+						I agree to the terms and conditions.
 					</Checkbox>
 					{errors.consent && (
 						<Text fontSize='xs' color='red.400'>

@@ -23,8 +23,8 @@ export const workWithUs = [
 
 export const ourOffices = [
 	{ name: 'Business Bay', link: '/office/business-bay' },
-	{ name: 'CuntDestr0yer', link: '/office/jumeirah-golf-estates' },
-	{ name: 'The Springs', link: '/office/the-springs' },
+	{ name: 'Spain', link: '/office/spain' },
+	{ name: 'Argentina', link: '/office/argentina' },
 	{ name: 'Motor City', link: '/office/motor-city' },
 	{ name: 'AZEROTH', link: '/office/palm-jumeirah' },
 ];
