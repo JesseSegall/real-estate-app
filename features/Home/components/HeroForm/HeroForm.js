@@ -58,7 +58,7 @@ const HeroForm = ({}) => {
 					<Checkbox
 						marginTop='1.3rem'
 						id='consent'
-						placeHolder='Consent'
+						placeholder='Consent'
 						{...register('consent', { required: true })}
 					>
 						I agree to the terms and conditions.
