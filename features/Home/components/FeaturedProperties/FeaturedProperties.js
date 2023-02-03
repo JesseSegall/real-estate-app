@@ -1,5 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
+import PropertySlider from './components/PropertySlider';
 
+// Data will come from index component and be passed down through featuredProps into carousel
 const FeaturedProperties = ({ featuredProperties }) => {
 	return (
 		<Box backgroundColor='blue.50'>
@@ -18,6 +20,17 @@ const FeaturedProperties = ({ featuredProperties }) => {
 				>
 					Discover Our Featured Properties!
 				</Text>
+				<Text
+					fontSize='2xl'
+					fontWeight='light'
+					marginTop='1rem'
+					marginBottom='3rem'
+					paddingX='2rem'
+					textAlign='center'
+				>
+					A selection of our best properties
+				</Text>
+				<PropertySlider featuredProperties={featuredProperties} />
 			</Box>
 		</Box>
 	);
