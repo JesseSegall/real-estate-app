@@ -1,5 +1,6 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { agents } from './agentConst';
+import AgentCard from './components/AgentCard';
 
 const MeetTheTeam = ({}) => {
 	return (
@@ -25,10 +26,7 @@ const MeetTheTeam = ({}) => {
 			</Text>
 			<Flex direction={{ base: 'column', sm: 'row' }} justifyContent='space-between' gap='1.5rem'>
 				{agents.map((agent) => (
-					<div key={agent.name} {...agent}>
-						TEST
-					</div>
-					//AGENT CARD GOES HERE
+					<AgentCard key={agent.name} {...agent} />
 				))}
 			</Flex>
 		</Box>
