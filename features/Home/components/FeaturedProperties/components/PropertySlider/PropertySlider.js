@@ -11,6 +11,7 @@ const PropertySlider = ({ featuredProperties }) => {
 	return (
 		<Swiper
 			//slidesPerView={isDesktop ? 3 : 1}
+			slidesPerView={3}
 			spaceBetween={10}
 			loop={true}
 			loopFillGroupWithBlank={true}
