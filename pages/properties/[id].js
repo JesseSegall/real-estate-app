@@ -1,7 +1,7 @@
 import { usePropertyFormat } from '@/features/common/Hooks/usePropertyFormat';
 import TextContentBox from '@/features/common/modules/TextContentBox';
 import DefaultLayout from '@/features/Layouts/DefaultLayout';
-//import { getProperty } from '@/features/Property/api/getProperty';
+import { getProperty } from '@/features/Property/api/getProperty';
 import PropertyMatterPortEmbed from '@/features/Property/components/PropertyMatterPortEmbed';
 import PropertyStats from '@/features/Property/components/PropertyStats';
 
@@ -99,9 +99,12 @@ const PropertySingle = ({ property }) => {
 };
 
 export default PropertySingle;
+
 export async function getServerSideProps(context) {
-	const property = require('@/features/data/property');
+	const { id } = context.query;
+	const property = await getProperty(id);
+
 	return {
-		props: { property },
+		props: { property: property },
 	};
 }

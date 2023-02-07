@@ -1,6 +1,7 @@
 import DefaultLayout from '@/features/Layouts/DefaultLayout';
 import { Box, SimpleGrid } from '@chakra-ui/react';
 import PropertyCard from '@/features/common/modules/PropertyCard';
+import { getProperties } from '@/features/common/api/getProperties';
 
 const Properties = ({ properties }) => {
 	return (
@@ -20,8 +21,8 @@ const Properties = ({ properties }) => {
 export default Properties;
 
 export async function getStaticProps() {
-	const { hits } = require('@/features/data/properties');
+	const properties = await getProperties(20);
 	return {
-		props: { properties: hits },
+		props: { properties: properties },
 	};
 }

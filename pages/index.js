@@ -1,3 +1,4 @@
+import { getProperties } from '@/features/common/api/getProperties';
 import FeaturedProperties from '@/features/Home/components/FeaturedProperties';
 import HeroBanner from '@/features/Home/components/HeroBanner';
 import MeetTheTeam from '@/features/Home/components/MeetTheTeam';
@@ -7,22 +8,20 @@ import DefaultLayout from '@/features/Layouts/DefaultLayout';
 
 export default function Home({ featuredProperties }) {
 	return (
-		<>
-			<DefaultLayout>
-				<HeroBanner />
-				<FeaturedProperties featuredProperties={featuredProperties} />
-				<MeetTheTeam />
-				<Partners />
-				<Testimonials />
-			</DefaultLayout>
-		</>
+		<DefaultLayout>
+			<HeroBanner />
+			<FeaturedProperties featuredProperties={featuredProperties} />
+			<MeetTheTeam />
+			<Partners />
+			<Testimonials />
+		</DefaultLayout>
 	);
 }
 
 // Fetches data at build time and generates a statically generated page
 export async function getStaticProps() {
-	const { hits } = require('@/features/data/properties');
+	const properties = await getProperties(5);
 	return {
-		props: { featuredProperties: hits.slice(0, 5) },
+		props: { featuredProperties: properties },
 	};
 }
