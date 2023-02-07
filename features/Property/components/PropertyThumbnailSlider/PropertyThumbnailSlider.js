@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Navigation, Thumbs } from 'swiper';
+import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -22,7 +22,8 @@ const PropertyThumbnailSlider = ({ photos }) => {
 				thumbs={{
 					swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
 				}}
-				modules={[FreeMode, Navigation, Thumbs]}
+				modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+				autoplay={{ delay: 3000, disableOnInteraction: false }}
 				className='mySwiper2'
 			>
 				{photos.map((image) => (
