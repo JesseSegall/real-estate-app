@@ -78,7 +78,7 @@ const PropertySingle = ({ property }) => {
 							>
 								{amenities.length
 									? amenities.map((item) => <Text>{item}</Text>)
-									: 'Please contact us for more info'}
+									: 'Please contact us for more details'}
 							</SimpleGrid>
 						</TextContentBox>
 					</GridItem>
@@ -99,7 +99,7 @@ const PropertySingle = ({ property }) => {
 };
 
 export default PropertySingle;
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
 	const property = require('@/features/data/property');
 	return {
 		props: { property },
