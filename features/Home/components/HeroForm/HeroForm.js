@@ -12,7 +12,7 @@ const HeroForm = ({}) => {
 	return (
 		<Box width='100%' padding='2rem' borderRadius='small' backgroundColor='white' color='gray.700'>
 			<Text fontSize='xl' fontWeight='bold'>
-				Free Boar PDF
+				Free Property PDF
 			</Text>
 			<Text fontSize='lg'>Complete the form below to download your guide</Text>
 			<form onSubmit={handleSubmit(onSubmit)}>

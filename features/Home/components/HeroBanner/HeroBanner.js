@@ -37,12 +37,11 @@ const HeroBanner = () => {
 				>
 					<Box width={{ base: '100%', sm: '50%' }}>
 						<Text fontSize={{ base: '4xl', sm: '5xl' }} lineHeight='shorter' marginBottom='1.5rem'>
-							Your ticket to Azeroth awaits check out our new{' '}
+							Your ticket to a forever home awaits check out our new{' '}
 							<strong>Property Guide today...</strong>
 						</Text>
 						<Text fontSize={{ base: 'lg', sm: '2xl' }}>
-							A free PDF with our best secrets for evaluating a property purchase in Azeroth and so
-							much more.
+							A free PDF with our best secrets for evaluating a property purchase and so much more.
 						</Text>
 					</Box>
 					<Box width={{ base: '100%', sm: 'auto' }} marginTop={{ base: '2rem', sm: '0' }}>
