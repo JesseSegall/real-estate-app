@@ -36,7 +36,7 @@ Each listing accesses an API to fetch real time data and display it including yo
 
 ### Properties
 ![image](https://user-images.githubusercontent.com/98127581/217564912-4c1da544-7ba0-4c0c-8214-1582c4a50349.png)
-## Getting Started
+
 
 
 
