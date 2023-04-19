@@ -25,7 +25,7 @@ export const usePropertyFormat = (property) => {
 
 	const amenities = property.amenities
 		?.flatMap(({ amenities }) => amenities)
-		.map((item) => item.text);
+		.map((item) => item?.text);
 
 	const furnished = property.furnishingStatus;
 
